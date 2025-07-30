@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+@theme {
+  --color-background: hsl(240, 8%, 96%);
+  --color-foreground: hsl(216, 35%, 14%);
+  --color-muted: hsl(220, 14%, 96%);
+  --color-muted-foreground: hsl(220, 9%, 46%);
+  --color-popover: hsl(0, 0%, 100%);
+  --color-popover-foreground: hsl(216, 35%, 14%);
+  --color-card: hsl(0, 0%, 100%);
+  --color-card-foreground: hsl(216, 35%, 14%);
+  --color-border: hsl(220, 13%, 91%);
+  --color-input: hsl(220, 13%, 91%);
+  --color-primary: hsl(239, 84%, 67%);
+  --color-primary-foreground: hsl(0, 0%, 98%);
+  --color-secondary: hsl(220, 14%, 96%);
+  --color-secondary-foreground: hsl(220, 9%, 46%);
+  --color-accent: hsl(220, 14%, 96%);
+  --color-accent-foreground: hsl(220, 9%, 46%);
+  --color-destructive: hsl(0, 84%, 60%);
+  --color-destructive-foreground: hsl(0, 0%, 98%);
+  --color-ring: hsl(216, 35%, 14%);
+  --radius: 1rem;
+
+  /* TheUnsaid custom colors */
+  --color-navy: hsl(230, 35%, 14%);
+  --color-soft-gray: hsl(240, 5%, 96%);
+  --color-soft-indigo: hsl(239, 84%, 67%);
+  --color-soft-violet: hsl(262, 83%, 68%);
+}

@@ -1,12 +1,12 @@
 const Herosection = () => {
   return (
-    <section className="h-screen bg-navy pt-20 section-padding">
-      <div className="max-w-7xl mx-auto">
-        <div className="mx-auto h-[500px] my-auto gap-8 max-w-4xl flex items-center justify-center flex-col">
+    <section className="h-screen bg-[#e7e7e7e3] dark:bg-navy pt-20 section-padding flex">
+      <div className="max-w-7xl my-auto mx-auto">
+        <div className="gap-8 max-w-4xl flex items-center justify-center flex-col">
           <h1 className="text-5xl md:text-7xl text-center font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
             Say what's been left unsaid.
           </h1>
-          <p className="text-2xl text-white w-150 text-center">
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 w-150 text-center">
             A safe space for honest thoughts. Receive anonymous messages through
             your personal link.
           </p>

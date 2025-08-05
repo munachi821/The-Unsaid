@@ -75,6 +75,8 @@ html {
   --color-destructive-foreground: hsl(0, 0%, 98%);
   --color-ring: hsl(216, 35%, 14%);
   --radius: 1rem;
+  --color-navy-primary: hsl(221 28% 21%);
+  --color-off-white: hsl(240 9% 96%);
 
   /* TheUnsaid custom colors */
   --color-navy: hsl(230, 35%, 14%);

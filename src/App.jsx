@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar.jsx";
 import Herosection from "./components/Hero-section.jsx";
 import Aboutsection from "./components/AboutSection.jsx";
 import Howitworks from "./components/Howitworks-section.jsx";
+import Features from "./components/Features-section.jsx";
 function App() {
   return (
     <>
@@ -9,6 +10,7 @@ function App() {
       <Herosection />
       <Aboutsection />
       <Howitworks />
+      <Features />
     </>
   );
 }

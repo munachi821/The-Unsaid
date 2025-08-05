@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar.jsx";
 import Herosection from "./components/Hero-section.jsx";
-import Aboutsection from "./components/AboutSection.jsx";
+import Aboutsection from "./components/Aboutsection.jsx";
 import Howitworks from "./components/Howitworks-section.jsx";
 import Features from "./components/Features-section.jsx";
 import Stories from "./components/Stories-section.jsx";

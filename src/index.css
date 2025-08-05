@@ -33,6 +33,26 @@ html {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(139, 92, 246, 0.2);
 }
+.unused {
+  background-color: #7963e9;
+}
+.glass-card {
+  border-width: 1px;
+  border-color: #fff3;
+  background-color: #ffffff1a;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+    0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-backdrop-blur: blur(16px);
+}
+.dark .glass-card {
+  border-color: #ffffff1a;
+  background-color: #ffffff0d;
+  --tw-backdrop-blur: blur(16px);
+}
 @theme {
   --color-background: hsl(240, 8%, 96%);
   --color-foreground: hsl(216, 35%, 14%);
@@ -49,6 +69,7 @@ html {
   --color-secondary: hsl(220, 14%, 96%);
   --color-secondary-foreground: hsl(220, 9%, 46%);
   --color-accent: hsl(220, 14%, 96%);
+  --color-accent2: hsl(250 75% 65%);
   --color-accent-foreground: hsl(220, 9%, 46%);
   --color-destructive: hsl(0, 84%, 60%);
   --color-destructive-foreground: hsl(0, 0%, 98%);
@@ -77,6 +98,7 @@ html {
   --color-secondary: hsl(230, 18%, 25%);
   --color-secondary-foreground: hsl(240, 5%, 96%);
   --color-accent: hsl(230, 18%, 25%);
+  --color-accent2: hsl(260 80% 70%);
   --color-accent-foreground: hsl(240, 5%, 96%);
   --color-destructive: hsl(0, 63%, 31%);
   --color-destructive-foreground: hsl(0, 0%, 98%);

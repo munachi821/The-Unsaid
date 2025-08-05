@@ -5,6 +5,7 @@ import Howitworks from "./components/Howitworks-section.jsx";
 import Features from "./components/Features-section.jsx";
 import Stories from "./components/Stories-section.jsx";
 import Truth from "./components/Truth-section.jsx";
+import Footer from "./components/Footer.jsx";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
       <Features />
       <Stories />
       <Truth />
+      <Footer />
     </>
   );
 }

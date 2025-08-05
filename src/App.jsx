@@ -4,6 +4,7 @@ import Aboutsection from "./components/AboutSection.jsx";
 import Howitworks from "./components/Howitworks-section.jsx";
 import Features from "./components/Features-section.jsx";
 import Stories from "./components/Stories-section.jsx";
+import Truth from "./components/Truth-section.jsx";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
       <Howitworks />
       <Features />
       <Stories />
+      <Truth />
     </>
   );
 }

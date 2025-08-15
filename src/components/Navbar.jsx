@@ -61,12 +61,15 @@ const Navbar = () => {
           </ul>
 
           <div className="hidden md:flex gap-4 text-base font-semibold">
-            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background transition-colors h-10 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full cursor-pointer">
+            <button
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background transition-colors h-10 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full cursor-pointer"
+              onClick={() => navigate("/Login")}
+            >
               Login
             </button>
             <button
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm transition-colors h-10 px-4 py-2 bg-violet-600 hover:bg-violet-700 text-white rounded-full cursor-pointer"
-              onClick={() => navigate("/signup")}
+              onClick={() => navigate("/Signup")}
             >
               Signup
             </button>

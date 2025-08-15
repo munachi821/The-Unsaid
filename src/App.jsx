@@ -1,9 +1,8 @@
 import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/Home.jsx";
-import Signup from "./components/Signup.jsx";
-import Login from "./components/Login.jsx";
+import Home from "./Routes/Home.jsx";
+import Signup from "./Routes/Signup.jsx";
+import Login from "./Routes/Login.jsx";
 
 /* import { createBrowserRouter } from "react-router-dom"; */
 

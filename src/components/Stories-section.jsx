@@ -3,8 +3,8 @@ const Stories = () => {
     <section className="section-padding py-20 bg-[#f0f0f7] dark:bg-[#181c2d]">
       <div className="max-w-6xl mx-auto">
         <div>
-          <h1 className="text-xl md:text-[40px] font-bold text-center mb-4 text-white">
-            Real Stories
+          <h1 className="text-3xl md:text-[40px] font-bold text-center mb-4 text-white">
+            Real <span className="text-[#7963e9]">Stories</span>
           </h1>
 
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mt-13">

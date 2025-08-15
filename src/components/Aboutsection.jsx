@@ -4,7 +4,7 @@ const Aboutsection = () => {
   return (
     <section className="section-padding py-20 bg-[#141729]">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-xl md:text-[42px] font-bold text-center mb-8 text-white">
+        <h1 className="text-3xl md:text-[42px] font-bold text-center mb-8 text-white">
           Where Hearts Speak{" "}
           <span className="text-[#7963e9] dark:text-[#9e75f0]">Freely</span>
         </h1>
@@ -16,7 +16,7 @@ const Aboutsection = () => {
               express what they've always wanted to tell you.
             </h3>
 
-            <p className="text-lg text-gray-300">
+            <p className="text-[14px] sm:text-lg text-gray-300">
               Whether it's gratitude, an apology, a confession, or simply a kind
               thought— TheUnsaid gives voice to the emotions that often remain
               unspoken.
@@ -24,17 +24,17 @@ const Aboutsection = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-20 mt-8 text-lg text-semibold text-[#7963e9] dark:text-[#9e75f0]">
-          <div className="flex flex-col items-center ">
-            <HeartHandshake />
+        <div className="flex items-center justify-center gap-20 mt-8 text-[12px] sm:text-lg text-semibold text-[#7963e9] dark:text-[#9e75f0]">
+          <div className="flex flex-col items-center text-center">
+            <HeartHandshake className="size-5 sm:size-7" />
             <p>Emotional Safety</p>
           </div>
-          <div className="flex flex-col items-center">
-            <EyeOff />
+          <div className="flex flex-col items-center text-center">
+            <EyeOff className="size-5 sm:size-7" />
             <p>Complete Anonymity</p>
           </div>
-          <div className="flex flex-col items-center">
-            <PenLine />
+          <div className="flex flex-col items-center text-center">
+            <PenLine className="size-5 sm:size-7" />
             <p>Pure Expression</p>
           </div>
         </div>

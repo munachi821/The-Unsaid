@@ -1,23 +1,23 @@
 import Navbar from "./components/Navbar.jsx";
-import Herosection from "./components/Hero-section.jsx";
-import Aboutsection from "./components/Aboutsection.jsx";
-import Howitworks from "./components/Howitworks-section.jsx";
-import Features from "./components/Features-section.jsx";
-import Stories from "./components/Stories-section.jsx";
-import Truth from "./components/Truth-section.jsx";
 import Footer from "./components/Footer.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home.jsx";
+import Signup from "./components/Signup.jsx";
+
+/* import { createBrowserRouter } from "react-router-dom"; */
+
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Herosection />
-      <Aboutsection />
-      <Howitworks />
-      <Features />
-      <Stories />
-      <Truth />
+
+      <Routes>
+        <Route Component={Home} path="/" />
+        <Route Component={Signup} path="/Signup" />
+      </Routes>
+
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

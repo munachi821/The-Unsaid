@@ -4,7 +4,7 @@ const Howitworks = () => {
   return (
     <section className="section-padding py-20 bg-[#f0f0f7] dark:bg-[#181c2d]">
       <div className="max-w-6xl mx-auto h-fit">
-        <h1 className="text-xl md:text-[40px] font-bold text-center mb-14 text-white">
+        <h1 className="text-3xl md:text-[40px] font-bold text-center mb-14 text-white">
           How <span className="text-[#7963e9]">TheUnsaid</span> Works
         </h1>
 

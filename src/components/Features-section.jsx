@@ -42,8 +42,8 @@ const feature = [
 const Features = () => {
   return (
     <section className="section-padding py-20 bg-[#141729]">
-      <div className="max-w-7xl mx-auto px-15">
-        <h1 className="text-xl md:text-[40px] font-bold text-center mb-4 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-15">
+        <h1 className="text-3xl md:text-[40px] font-bold text-center mb-4 text-white">
           Features That <span className="text-[#7963e9]">Matter</span>
         </h1>
         <p className="text-center text-lg dark:text-[#e4e4e7] text-[#495c83">

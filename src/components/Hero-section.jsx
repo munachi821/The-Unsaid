@@ -18,7 +18,7 @@ const Herosection = () => {
                 Create Your Link
               </button>
             </Link>
-            <Link to="/Signup">
+            <Link to="/Login">
               <button className="text-lg font-semibold h-10 rounded-md flex items-center border-2 border-indigo-600 px-8 py-4 cursor-pointer bg-background text-indigo-600 hover:bg-indigo-600 hover:text-white hover:scale-105 transform transition duration-200">
                 Login
               </button>

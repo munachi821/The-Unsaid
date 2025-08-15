@@ -72,7 +72,7 @@ const Navbar = () => {
             </button>
           </div>
           <div
-            className="size-10 flex items-center justify-center gap-2 border bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full glassmorphism dark:glassmorphism-dark border-white/20 hover:scale-110 transition-all duration-300 cursor-pointer"
+            className="size-10 flex items-center justify-center gap-2 border bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full glassmorphism dark:glassmorphism-dark border-white/20 hover:scale-110 transition-all duration-300 cursor-pointer ml-3"
             onClick={toggleTheme}
           >
             {isDarkMode ? (

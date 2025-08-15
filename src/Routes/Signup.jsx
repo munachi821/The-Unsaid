@@ -16,8 +16,8 @@ export default function Signup() {
     <section className="bg-[#f0f0f7] dark:bg-[#181c2d] h-full w-screen pt-25 section-padding">
       <div className="max-w-4xl mx-auto flex items-center flex-col">
         <div className="flex items-center flex-col gap-2 mb-6">
-          <h1 className="text-[#fafaf8] text-3xl sm:text-[40px] font-bold">
-            Join <span className="text-[#7963e9]">The Unsaid</span>
+          <h1 className="text-[#fafaf8] text-4xl sm:text-[40px] font-bold">
+            Join <span className="text-[#7963e9]">The Unsaid!</span>
           </h1>
           <p className="text-sm text-[#ffffffce]">
             create your anonymous message link

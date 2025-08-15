@@ -1,10 +1,8 @@
 import unsaid_logo from "../assets/unsaid_logo.png";
-import { useState } from "react";
+import Copyright from "./Copyright";
 const Footer = () => {
-  const [year, setyear] = useState(new Date().getFullYear());
-
   return (
-    <section className="section-padding py-10 bg-navy text-soft-gray">
+    <footer className="section-padding py-10 bg-navy text-soft-gray">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between border-b border-[#7963e9] pb-6 flex-col sm:flex-row">
           <div className="flex mb-4 sm:mb-0">
@@ -45,11 +43,9 @@ const Footer = () => {
             </a>
           </ul>
         </div>
-        <p className="text-center mt-6 text-sm text-gray-400">
-          © {year} TheUnsaid. A safe space for honest thoughts.
-        </p>
+        <Copyright />
       </div>
-    </section>
+    </footer>
   );
 };
 

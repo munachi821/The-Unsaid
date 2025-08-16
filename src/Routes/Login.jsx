@@ -1,4 +1,4 @@
-import { EyeClosedIcon, EyeIcon, Lock, Mail, User } from "lucide-react";
+import { EyeClosedIcon, EyeIcon, Lock, Mail } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Copyright from "../components/Copyright";
@@ -7,6 +7,33 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   function passwordShown() {
     setShowPassword((isShown) => !isShown);
+  }
+  const [error, setError] = useState({});
+
+  function handleSubmit(formData) {
+    let errors = {};
+
+    const email = formData.get("email").trim();
+    const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    if (!email) {
+      errors.email = "enter your email";
+    } else if (!EMAIL_REGEX.test(email)) {
+      errors.email = "invalid email";
+    }
+
+    const password = formData.get("password");
+    if (!password) {
+      errors.password = "enter your password";
+    }
+
+    setError(errors);
+    if (Object.keys(errors).length === 0) {
+      alert("Form submitted successfully");
+      console.log({
+        email,
+        password,
+      });
+    }
   }
   return (
     <section className="bg-[#f0f0f7] dark:bg-[#181c2d] h-screen w-screen pt-25 section-padding">
@@ -18,41 +45,70 @@ const Login = () => {
         </div>
 
         <div className="max-w-[30rem] w-full p-5 sm:p-10 glass-card dark:glass-card rounded-md">
-          <form action="#" className="flex flex-col gap-5">
-            <div className="flex flex-col gap-3">
-              <label
-                htmlFor="email"
-                className="text-sm font-medium text-[#f1f1f8]"
-              >
-                Email
-              </label>
+          <form action={handleSubmit} className="flex flex-col gap-5">
+            <div className="flex flex-col">
+              <div className="flex w-full justify-between items-center mb-2">
+                <label
+                  htmlFor="email"
+                  className="text-sm font-medium text-[#f1f1f8]"
+                >
+                  Email
+                </label>
+
+                {error.email && (
+                  <p className="text-error text-[12px] sm:text-sm">
+                    {error.email}
+                  </p>
+                )}
+              </div>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <input
                   type="email"
-                  placeholder="email@gmail.com"
-                  className="w-full h-10 placeholder:text-muted-foreground outline-0 border-0 text-[#f3f3f3] focus:border-accent2 focus:border bg-background/50 border-border/50 rounded-md pl-10 focus:outline-accent2 focus:outline-2 transform focus:outline-offset-2 duration-150 text-sm"
+                  placeholder="email@example.com"
+                  name="email"
+                  className={`w-full h-10 placeholder:text-muted-foreground outline-0 border-0 text-[#f3f3f3] ${
+                    error.email ? "focus:border-error" : "focus:border-accent2"
+                  } focus:border bg-background/50 border-border/50 rounded-md pl-10 ${
+                    error.email
+                      ? "focus:outline-error"
+                      : "focus:outline-accent2"
+                  } focus:outline-2 transform focus:outline-offset-2 duration-150 text-sm`}
                   id="email"
-                  required
                 />
               </div>
             </div>
 
-            <div className="flex flex-col gap-3">
-              <label
-                htmlFor="password"
-                className="text-sm font-medium text-[#f1f1f8]"
-              >
-                Password
-              </label>
+            <div className="flex flex-col">
+              <div className="flex items-center justify-between mb-2 w-full">
+                <label
+                  htmlFor="password"
+                  className="text-sm font-medium text-[#f1f1f8]"
+                >
+                  Password
+                </label>
+                {error.password && (
+                  <p className="text-error text-[12px] sm:text-sm">
+                    {error.password}
+                  </p>
+                )}
+              </div>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="Create your Password"
-                  className="w-full h-10 placeholder:text-muted-foreground outline-0 border-0 text-[#f3f3f3] focus:border-accent2 focus:border bg-background/50 border-border/50 rounded-md pl-10 focus:outline-accent2 focus:outline-2 transform focus:outline-offset-2 duration-150 text-sm font-medium"
+                  name="password"
+                  className={`w-full h-10 placeholder:text-muted-foreground outline-0 border-0 text-[#f3f3f3] ${
+                    error.password
+                      ? "focus:border-error"
+                      : "focus:border-accent2"
+                  } focus:border bg-background/50 border-border/50 rounded-md pl-10 ${
+                    error.password
+                      ? "focus:outline-error"
+                      : "focus:outline-accent2"
+                  } focus:outline-2 transform focus:outline-offset-2 duration-150 text-sm`}
                   id="password"
-                  required
                 />
                 <div
                   className="absolute right-0 bottom-0 h-full flex items-center justify-center w-10 cursor-pointer"

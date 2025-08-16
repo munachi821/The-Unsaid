@@ -77,6 +77,7 @@ html {
   --radius: 1rem;
   --color-navy-primary: hsl(221 28% 21%);
   --color-off-white: hsl(240 9% 96%);
+  --color-error: #db010c;
 
   /* TheUnsaid custom colors */
   --color-navy: hsl(230, 35%, 14%);

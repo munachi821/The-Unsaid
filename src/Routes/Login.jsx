@@ -8,33 +8,62 @@ const Login = () => {
   function passwordShown() {
     setShowPassword((isShown) => !isShown);
   }
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
   const [error, setError] = useState({});
 
-  function handleSubmit(formData) {
-    let errors = {};
+  function validate(data) {
+    let errorMsg = {};
 
-    const email = formData.get("email").trim();
-    const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    if (!email) {
-      errors.email = "enter your email";
-    } else if (!EMAIL_REGEX.test(email)) {
-      errors.email = "invalid email";
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!data.email.trim()) {
+      errorMsg.email = "enter an email";
+    } else if (!emailRegex.test(data.email)) {
+      errorMsg.email = "invalid email";
     }
 
-    const password = formData.get("password");
-    if (!password) {
-      errors.password = "enter your password";
+    if (!data.password) {
+      errorMsg.password = "enter a password";
     }
 
-    setError(errors);
-    if (Object.keys(errors).length === 0) {
-      alert("Form submitted successfully");
-      console.log({
-        email,
-        password,
-      });
+    return errorMsg;
+  }
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    //Validate while typing
+    setError((prevErrors) => {
+      const updatedData = { ...formData, [name]: value };
+      return validate(updatedData);
+    });
+  }
+
+  //Handle submit
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const validationErrors = validate(formData);
+    setError(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      alert("Form submitted succesfully");
+
+      //backend login
+      console.log(formData);
     }
   }
+
+  //Disable button if errors or any empty field
+  const isDisabled =
+    Object.keys(error).length > 0 || !formData.email || !formData.password;
   return (
     <section className="bg-[#f0f0f7] dark:bg-[#181c2d] h-screen w-screen pt-25 section-padding">
       <div className="max-w-4xl mx-auto flex items-center flex-col">
@@ -45,7 +74,7 @@ const Login = () => {
         </div>
 
         <div className="max-w-[30rem] w-full p-5 sm:p-10 glass-card dark:glass-card rounded-md">
-          <form action={handleSubmit} className="flex flex-col gap-5">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div className="flex flex-col">
               <div className="flex w-full justify-between items-center mb-2">
                 <label
@@ -65,8 +94,10 @@ const Login = () => {
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <input
                   type="email"
-                  placeholder="email@example.com"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="email@example.com"
                   className={`w-full h-10 placeholder:text-muted-foreground outline-0 border-0 text-[#f3f3f3] ${
                     error.email ? "focus:border-error" : "focus:border-accent2"
                   } focus:border bg-background/50 border-border/50 rounded-md pl-10 ${
@@ -99,6 +130,8 @@ const Login = () => {
                   type={showPassword ? "text" : "password"}
                   placeholder="Create your Password"
                   name="password"
+                  value={formData.password}
+                  onChange={handleChange}
                   className={`w-full h-10 placeholder:text-muted-foreground outline-0 border-0 text-[#f3f3f3] ${
                     error.password
                       ? "focus:border-error"
@@ -130,7 +163,14 @@ const Login = () => {
               Forgot Password?
             </Link>
 
-            <button className="bg-[#7963e9] font-medium rounded-md py-2 hover:bg-[#7963e9]/90 text-[16.5px] text-[#141729] cursor-pointer">
+            <button
+              className={`font-medium rounded-md py-2  text-[16.5px] text-[#141729] cursor-pointer mt-4 duration-200 transition-colors ${
+                isDisabled
+                  ? "bg-[#7963e9]/40 cursor-not-allowed"
+                  : "bg-[#7963e9] hover:bg-[#7963e9]/90"
+              }`}
+              disabled={isDisabled}
+            >
               Login
             </button>
 

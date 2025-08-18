@@ -75,12 +75,13 @@ export default function Signup() {
 
     if (Object.keys(validationErrors).length === 0) {
       alert("Form submitted succesfully");
-      //vikrez backend logic
+
+      //backend logic
       console.log(formData);
     }
   }
 
-  //Diisable button if errors or empty fields
+  //Disable button if errors or any empty fields
   const isDisabled =
     Object.keys(errors).length > 0 ||
     !formData.username ||
@@ -88,8 +89,9 @@ export default function Signup() {
     !formData.password ||
     !formData.confirmPassword;
 
+  document.body.classList.add("overflow-x-hidden");
   return (
-    <section className="bg-[#f0f0f7] dark:bg-[#181c2d] h-full w-screen pt-25 section-padding">
+    <section className="bg-[#f0f0f7] dark:bg-[#181c2d] h-full w-screen pt-25 section-padding ">
       <div className="max-w-4xl mx-auto flex items-center flex-col">
         <div className="flex items-center flex-col gap-2 mb-6">
           <h1 className="text-[#fafaf8] text-4xl sm:text-[40px] font-bold">

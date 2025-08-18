@@ -74,8 +74,8 @@ const Login = () => {
         </div>
 
         <div className="max-w-[30rem] w-full p-5 sm:p-10 glass-card dark:glass-card rounded-md">
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-            <div className="flex flex-col">
+          <form onSubmit={handleSubmit} className="flex flex-col">
+            <div className="flex flex-col mb-5">
               <div className="flex w-full justify-between items-center mb-2">
                 <label
                   htmlFor="email"
@@ -158,13 +158,13 @@ const Login = () => {
 
             <Link
               to="/forgot-password"
-              className="text-[#7963e9] transition-colors hover:text-[#7963e9]/70 w-fit"
+              className="text-[#7963e9] transition-colors hover:text-[#7963e9]/70 w-fit my-3"
             >
               Forgot Password?
             </Link>
 
             <button
-              className={`font-medium rounded-md py-2  text-[16.5px] text-[#141729] cursor-pointer mt-4 duration-200 transition-colors ${
+              className={`font-medium rounded-md py-2  text-[16.5px] text-[#141729] cursor-pointer duration-200 transition-colors ${
                 isDisabled
                   ? "bg-[#7963e9]/40 cursor-not-allowed"
                   : "bg-[#7963e9] hover:bg-[#7963e9]/90"
@@ -174,7 +174,7 @@ const Login = () => {
               Login
             </button>
 
-            <p className="text-center text-muted-foreground text-sm">
+            <p className="text-center text-muted-foreground text-sm mt-3">
               Dont't have an account?{" "}
               <Link
                 to="/Signup"

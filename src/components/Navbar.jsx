@@ -29,8 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    /* REMOVE THE HIDDEN OOOOO */
-    <nav className=" fixed top-0 left-0 right-0 z-40 glassmorphism dark:glassmorphism-dark py-2.5 px-4 hidden">
+    <nav className=" fixed top-0 left-0 right-0 z-40 glassmorphism dark:glassmorphism-dark py-2.5 px-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div>
           <Link to="/" className="flex items-center">

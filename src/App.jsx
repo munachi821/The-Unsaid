@@ -11,8 +11,6 @@ import Dashboard from "./Routes/Dashboard.jsx";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-
       <Routes>
         <Route Component={Home} path="/" />
         <Route Component={Signup} path="/Signup" />

@@ -1,9 +1,11 @@
 import { EyeClosedIcon, EyeIcon, Lock, Mail, User } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Copyright from "../components/Copyright";
 
 export default function Signup() {
+  const navigate = useNavigate();
+
   const [showPassword, setShowPassword] = useState(false);
   function passwordShown() {
     setShowPassword((isShown) => !isShown);
@@ -278,6 +280,8 @@ export default function Signup() {
                   : "bg-[#7963e9] hover:bg-[#7963e9]/90"
               }`}
               disabled={isDisabled}
+              onClick={() => navigate("/Dashboard")}
+              /* to="/Dashboard" */
             >
               Create Account
             </button>

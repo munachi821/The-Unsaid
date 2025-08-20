@@ -27,6 +27,12 @@ html {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+.glassmorphism-bar {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
 .dark\:glassmorphism-dark:is(.dark *) {
   background: rgba(31, 34, 53, 0.8);
   -webkit-backdrop-filter: blur(10px);
@@ -34,7 +40,7 @@ html {
   border: 1px solid rgba(139, 92, 246, 0.2);
 }
 .unused {
-  background-color: #141729;
+  background-color: #171b30;
 }
 .glass-card {
   border-width: 1px;
@@ -46,6 +52,21 @@ html {
     0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-backdrop-blur: blur(16px);
+}
+.glass-card-sidebar {
+  border-bottom-width: 1px;
+  border-bottom-color: #fff3;
+  /* border-top-color: none;
+  border-left-color: none;
+  border-right-color: none; */
+  background-color: #171b30;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+    0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #47474700),
+    var(--tw-ring-shadow, 0 0 #2b2b2b00), var(--tw-shadow);
   --tw-backdrop-blur: blur(16px);
 }
 .dark .glass-card {

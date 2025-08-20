@@ -163,16 +163,17 @@ const Login = () => {
               Forgot Password?
             </Link>
 
-            <button
-              className={`font-medium rounded-md py-2  text-[16.5px] text-[#141729] cursor-pointer duration-200 transition-colors ${
+            <Link
+              className={`font-medium rounded-md py-2  text-[16.5px] text-[#141729] cursor-pointer duration-200 transition-colors text-center ${
                 isDisabled
                   ? "bg-[#7963e9]/40 cursor-not-allowed"
                   : "bg-[#7963e9] hover:bg-[#7963e9]/90"
               }`}
               disabled={isDisabled}
+              to="/Dashboard"
             >
               Login
-            </button>
+            </Link>
 
             <p className="text-center text-muted-foreground text-sm mt-3">
               Dont't have an account?{" "}

@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
 
 const Dashboard = () => {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [active, setActive] = useState("Dashboard");
   function openSidebar() {

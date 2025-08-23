@@ -81,6 +81,7 @@ export default function Signup() {
 
       //backend logic
       console.log(formData);
+      navigate(`/${formData.username}/dashboard`);
     }
   }
 
@@ -102,7 +103,7 @@ export default function Signup() {
             <h1 className="text-[#fafaf8] text-4xl sm:text-[40px] font-bold">
               Join <span className="text-[#7963e9]">The Unsaid!</span>
             </h1>
-            <p className="text-sm text-[#ffffffce]">
+            <p className="text-sm text-[#cec8c8ce]">
               create your anonymous message link
             </p>
           </div>
@@ -285,8 +286,7 @@ export default function Signup() {
                     : "bg-[#7963e9] hover:bg-[#7963e9]/90"
                 }`}
                 disabled={isDisabled}
-                onClick={() => navigate("/Dashboard")}
-                /* to="/Dashboard" */
+                onClick={() => navigate(`/${FormData.username}/dashboard`)}
               >
                 Create Account
               </button>
